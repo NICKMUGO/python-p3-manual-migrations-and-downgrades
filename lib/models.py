@@ -20,8 +20,8 @@ class Student(Base):
     __tablename__ = 'students'
 
     id = Column(Integer(), primary_key=True)
-    name = Column(String(), index=True)
-    email = Column(String(55))
+    student_name = Column(String(), index=True)
+    gmail = Column(String(55))
     grade = Column(Integer())
     birthday = Column(DateTime())
     enrolled_date = Column(DateTime(), default=datetime.now())

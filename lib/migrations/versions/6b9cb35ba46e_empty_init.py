@@ -17,8 +17,10 @@ depends_on = None
 
 
 def upgrade() -> None:
-    pass
+     op.alter_column('students', 'name', new_column_name='students_name')
+     op.alter_column('students', 'email', new_column_name='gmail')
 
 
 def downgrade() -> None:
-    pass
+    op.alter_column('students','students_name', new_column_name='name')
+    op.alter_column('students','gmail', new_column_name='email')
